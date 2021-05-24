@@ -1,0 +1,22 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "example",
+            "image": "[account-id].dkr.ecr.[region].amazonaws.com/[service-name]:[tag]",
+            "memoryReservation": "256",
+            "cpu": "256",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": "0",
+                    "containerPort": "3000",
+                    "protocol": "tcp"
+                }
+            ]
+        }
+    ],
+    "volumes": [],
+    "networkMode": "bridge",
+    "placementConstraints": [],
+    "family": "example"
+}
